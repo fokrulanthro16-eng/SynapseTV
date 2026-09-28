@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #080B10;
+  --foreground: #FFFFFF;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: #080B10;
+  color: #FFFFFF;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  overflow: hidden;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Fire TV 10-Foot Spatial Focus Classes */
+.dpad-focusable {
+  transition: transform 0.15s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.15s ease, border-color 0.15s ease, background-color 0.15s ease;
+  outline: none !important;
+}
+
+.dpad-focused {
+  transform: scale(1.04);
+  border-color: #FF9900 !important;
+  box-shadow: 0 0 0 3px #FF9900, 0 10px 30px rgba(255, 153, 0, 0.35) !important;
+  z-index: 40 !important;
+}
+
+.dpad-focused-cyan {
+  transform: scale(1.04);
+  border-color: #00A8E1 !important;
+  box-shadow: 0 0 0 3px #00A8E1, 0 10px 30px rgba(0, 168, 225, 0.4) !important;
+  z-index: 40 !important;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #121824;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #232F3E;
+  border-radius: 3px;
+}
+
+@keyframes pulseSlow {
+  0%, 100% { opacity: 0.9; }
+  50% { opacity: 0.4; }
+}
+
+.animate-pulse-slow {
+  animation: pulseSlow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(120%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
