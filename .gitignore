@@ -48,6 +48,7 @@ Thumbs.db
 .idea/
 *.swp
 *.swo
+.vercel/
 
 # Video cache / temp recordings (keep assets intact)
 scripts/recordings/
